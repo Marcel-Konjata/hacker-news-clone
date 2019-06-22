@@ -1,0 +1,46 @@
+header{
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    padding: 25px;
+    &.bg-light{
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.123);
+        background-color: rgb(221, 221, 221);
+    }
+    &.bg-dark{
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.123);
+        background-color: rgba(83, 80, 80, 0.774);
+    }
+
+    .nav-link{
+        
+        font-weight: 600;
+        margin-right: 25px;
+        padding: 5px 10px;
+        &.activeLink{
+            color: red;
+            border: solid 2px red;
+            
+        }
+    }
+
+    figcaption{
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    figure{
+        display: flex;
+        align-items: center;
+        .theme-icon{
+            width: 30px;
+            height: 30px;
+        }
+    }
+}
+.clock{
+    margin-right: auto;
+    margin-left: 25%;
+    font-weight: bold;
+    font-size: 2rem;
+}

@@ -1,0 +1,64 @@
+@import "./header";
+@import "./layout";
+@import "./stories";
+@import "./comments";
+
+*,
+*::after,
+*::before {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-size: 0.625rem; //reset base pixel ratio to 1 rem : 10px
+   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+   height: 100%;
+   @media screen and (max-width:500px) {
+      font-size: 0.5rem;      
+   }
+}
+
+body {
+   font-size: 1.6rem; //setting defoult size to 16px again, orginall value would be 1 rem
+   height: 100%;
+}
+
+a {
+   font-size: 1.8rem;
+   text-decoration: none;
+   color: inherit;
+}
+
+.main-container {
+   margin: 0 auto;
+   max-width: 1200px;
+   padding: 10px 15px;
+}
+.wrapper {
+   height: 100vh;
+   width: 100%;
+   position: fixed;
+   overflow-y: auto; //little trick for parrent component stayed static yet display child with deafoult scrollbar
+   &.bg-light {
+      background-color: transparent;
+      background-image: url("./../img/day.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   }
+   &.bg-dark {
+      background-color: rgba(34, 29, 29, 0.226);
+      color: rgba(255, 255, 255, 0.726);
+      background: url("./../img/night.jpg") no-repeat center/cover;
+      transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+   }
+}
+
+// .bg-light {
+//    background-color: rgba(218, 213, 213, 0.966);
+// }
+// .bg-dark {
+//    background-color: rgb(34, 29, 29);
+// }
