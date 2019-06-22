@@ -35,8 +35,8 @@ function Header() {
                      alt="themeswitch"
                      src={
                         theme === "dark"
-                           ? "./img/bulb.svg"
-                           : "./img/flashlight.png"
+                           ? "/img/bulb.svg"
+                           : "/img/flashlight.png"
                      }
                      className="theme-icon"
                   />
